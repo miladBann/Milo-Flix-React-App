@@ -1,0 +1,1135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@300;400;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+.row1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row2 {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.link_fix {
+  text-decoration: none;
+}
+
+/*################################################*/
+/* burger menu */
+
+.btn__menu {
+  background-color: transparent;
+  font-size: 28px;
+  text-align: center;
+  border: none;
+  color: rgb(138, 138, 138);
+  display: none;
+  cursor: pointer;
+}
+
+.menu__backdrop {
+  border: 0.5px solid lightgray;
+  position: absolute;
+  background-color: rgb(104, 103, 103);
+  top: 2%;
+  right: 1%;
+  left: 50%;
+  bottom: 70%;
+  z-index: 100;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms ease;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.menu--open .menu__backdrop {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12%;
+  height: 70%;
+}
+
+.menu__list {
+  padding: 14px 0px;
+  list-style-type: none;
+}
+
+.cart2 {
+  font-size: 22px;
+}
+
+.menu__link {
+  font-size: 22px;
+  color: white;
+}
+
+.btn__menu--close {
+  position: absolute;
+  right: 20px;
+  top: 8px;
+  color: rgb(85, 85, 85);
+  cursor: pointer;
+}
+
+/*#################################################*/
+/* skeliton loading state for movies  */
+
+.movie_skeliton {
+  width: calc(100% / 4);  
+}
+
+.movie_skeliton figure {
+  height: 380px;
+  width: 260px;
+  background-color: rgb(148, 147, 147);
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+
+.title_skeliton {
+  background-color: rgb(148, 147, 147);
+  height: 20px;
+  margin-bottom: 8px;
+  width: 70%;
+  border-radius: 5px;
+}
+
+.year_skeliton {
+  height: 20px;
+  background-color: rgb(148, 147, 147);
+  width: 30%;
+  border-radius: 5px;
+  margin-bottom: 36px;
+}
+
+/*#####################################################
+#######################################################
+skeliton loading state for movie info */
+
+.movie_cont_skeliton {
+  display: flex;
+}
+
+.movie_pic_skeliton {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie_pic_skeliton figure {
+  margin-top: 64px;
+  width: 320px;
+  height: 470px;
+  background-color: gray;
+  border-radius: 5px;
+}
+
+.movie_pic_skeliton button {
+  width: 40%;
+  height: 7%;
+  background-color: gray;
+  border-radius: 50px;
+  border: none;
+  margin-top: 36px;
+}
+
+/*#############################*/
+/* divider between the two divs */
+.divider {
+  width: 0.7px;
+  background-color: white;
+  height: 80vh;
+  margin: 32px 0px;
+}
+
+/*###########################################*/
+.movie_info_skeliton {
+  width: 60%;
+  margin-left: 32px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title_skeliton {
+  background-color: gray;
+  height: 30px;
+  margin: 42px 0px 56px 0px;
+  border-radius: 5px;
+}
+
+
+.time_genre {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.duration_skeliton {
+  height: 30px;
+  width: 120px;
+  background-color: gray;
+  border-radius: 5px;
+  margin: 12px;
+}
+
+.genre_skeliton {
+  height: 30px;
+  width: 250px;
+  background-color: gray;
+  border-radius: 5px;
+  margin-bottom: 56px;
+}
+
+.released_skeliton {
+  background-color: gray;
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
+}
+
+.sum_skeliton {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.summary_skeliton {
+  background-color: gray;
+  height: 30px;
+  width: 120px;
+  border-radius: 5px;
+  margin-top: 36px;
+}
+
+.plot_skeliton {
+  background-color: gray;
+  width: 600px;
+  height: 300px;
+  border-radius: 5px;
+  margin-top: 12px;
+}
+
+.rating_skeliton {
+  background-color: gray;
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  margin-top: 24px;
+}
+
+.watch_movie_skeliton {
+  width: 50%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.watch_movie_skeliton button{
+  width: 150px;
+  height: 50px;
+  background-color: gray;
+  border-radius: 50px;
+  border: none;
+  margin-bottom: 32px;
+  margin-top: 24px;
+}
+
+
+/*#################################################*/
+/* Simple Nav */
+
+.simple_nav {
+  background: linear-gradient(to right, #222222 20%, #325f2e, rgb(121, 8, 8) );
+  padding: 0px 12%;
+}
+.simple_nav ul {
+  display: flex;
+}
+
+.simple_nav li {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.simple_nav figure {
+  width: 100%;
+}
+
+.simple_nav img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.cont1 {
+  width: 15%
+}
+
+.nav_links2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.nav_links2 li {
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.nav_links2 li:hover {
+  text-decoration: underline;
+}
+
+
+
+/*################################################*/
+/* header and Navigation bar*/
+
+#top_header {
+  background-color: black;
+  height: 40vh;
+  background-image: url("./assests/background.jpg");
+  background-size: cover;
+  background-position: 50%;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.container1 li {
+  list-style-type: none;
+}
+
+
+.container1 img {
+  width: 200px;
+  list-style-type: none;
+  border-radius: 5px;
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_links {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin: 0px 24px;
+}
+
+
+.nav_links li{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.nav_links li:hover {
+  text-decoration: underline;
+  text-decoration-color: rgb(231, 231, 218);
+  color: beige;
+  text-underline-offset: 10px;
+  transition: all 300ms ease;
+}
+
+.special {
+  padding: 8px 18px;
+  border-radius: 50px;
+  background-color: rgb(95, 95, 95);
+}
+
+.seach_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3%;
+}
+
+.seach_box h3 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.search_bar {
+  margin-top: 12px;
+  position: relative;
+  width: 50%;
+  height: 55%;
+}
+
+.search_bar input {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: rgb(14, 28, 28);
+  color: white;
+}
+
+.search_bar input::placeholder{
+  font-size: 18px;
+  color: rgb(164, 164, 164);
+}
+
+.fa-magnifying-glass {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  color: rgb(164, 164, 164);;
+  font-size: 24px;
+  margin: 10px 20px;
+  cursor: pointer;
+}
+
+/*#################################################*/
+/* movies section */
+
+#movies {
+  background: linear-gradient(to right, #333333 20%, #4b8d45, rgb(167, 11, 11) );
+  
+}
+
+.container2 h3 {
+  color: white;
+  font-size: 28px;
+  padding: 24px 0px;
+  text-align: center;
+}
+
+.top_filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#filter {
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(to right, #e1e1e1 20%, #b8b5b5, #525151);
+  color: black;
+}
+
+.movie_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.movie {
+  width: calc(100% / 4);  
+  
+}
+
+.movie figure {
+  height: 430px;
+  width: 280px;
+  overflow-y: hidden;
+}
+
+.movie img {
+  scale: 0.9;
+  position: relative;
+  right: 12px;
+  border-radius: 10px;
+  transition: all 300ms ease;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+  object-position: center center;
+}
+
+.movie img:hover {
+  scale: 0.95;
+  transition: all 300ms ease;
+}
+
+.movie h4 {
+  color: white;
+  font-size: 20px;
+  margin: 0px 12px 4px 12px;
+  text-align: left;
+}
+
+.movie .year {
+  margin-bottom: 24px;
+}
+
+
+/*################################################*/
+/* show movie info (section 2)*/
+
+#movie_info {
+  min-height: 90vh;
+  background-image: url("./assests/background.jpg");
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.container2 {
+  padding-top: 12px;
+  overflow-y: hidden;
+}
+
+.movie_cont {
+  display: flex;
+}
+
+.movie_pic {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie_pic figure {
+  margin-top: 64px;
+  width: 300px;
+  height: 450px;
+  overflow-y: hidden;
+  transition: all 400ms ease-in-out;
+}
+
+.movie_pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: fill;
+}
+
+.movie_pic figure:hover {
+  scale: 1.1;
+  transition: all 400ms ease-in-out;
+}
+
+.movie_pic button {
+  width: 30%;
+  font-size: 22px;
+  background-color: #5f5f5f;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  margin-top: 36px;
+  transition: all 500ms ease-in-out;
+}
+
+.movie_pic button a {
+  color: white;
+  text-decoration: none;
+}
+
+/*#############################*/
+/* divider between the two divs */
+.divider {
+  width: 0.7px;
+  background-color: white;
+  height: 70vh;
+  margin: 32px 0px;
+}
+
+/*###########################################*/
+.movie_info {
+  width: 60%;
+  margin-left: 32px;
+  transition: all 500ms ease-in-out;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: 56px;
+  margin: 24px 0px 0px 0px;
+  overflow-y: hidden;
+}
+
+
+.time_genre {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: hidden;
+}
+
+.duration {
+  font-size: 20px;
+  text-align: left;
+  overflow-y: hidden;
+}
+
+.released {
+  font-size: 20px;
+  overflow-y: hidden;
+}
+
+.sum {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: hidden;
+}
+
+
+.summary {
+  font-size: 20px;
+}
+
+.plot {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 350;
+  color: white;
+  line-height: 28px;
+  overflow-y: hidden;
+  
+}
+
+.rating {
+  font-size: 20px;
+}
+
+.watch_movie {
+  width: 50%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+.watch_movie button{
+  font-size: 20px;
+  color: white;
+  background-color: #5f5f5f;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  margin: 32px 0px;
+}
+
+
+
+/*#################################################*/
+/*#################################################*/
+/*#################################################*/
+/* Recommended Movies section */
+.recommended_cont {
+  display: flex;
+  flex-direction: column;
+}
+
+.recommended_cont h3 {
+  text-align: left;
+}
+
+.recommended_movies {
+  display: flex;
+}
+
+
+/*#################################################*/
+/* Subscription page */
+
+.sub_cont {
+  background-image: url("./assests/background.jpg");
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+
+.prices {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.price {
+  overflow-y: hidden;
+  width: 400px;
+  height: 700px;
+  border: 2px solid #d3d5d5;
+  margin: 48px 8px;
+  text-align: center;
+  border-radius: 10px;
+  transition: all 400ms ease;
+  box-shadow: 0 0 10px rgba(245, 245, 245, 0.8), 0 0 20px rgba(245, 245, 245, 0.5);
+}
+
+.price:hover {
+  scale: 1.009;
+  transition: all 400ms ease;
+}
+
+.price h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  margin-top: 48px;
+}
+
+.price h1 {
+  font-size: 56px;
+  color: white;
+  margin: 16px 0px;
+  font-weight: 800;
+}
+
+.price h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 28px;
+}
+
+hr {
+  font-weight: 900;
+  font-size: 24px;
+  color:#a2a9aa;
+}
+
+.indivisuals h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  margin: 28px 0px;
+}
+
+.indivisuals ul li {
+  list-style-type: none;
+  line-height: 48px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.last {
+  margin-bottom: 16px;
+}
+
+.price button {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 16px 48px;
+  border-radius: 50px;
+  border: none;
+  margin: 64px 0px;
+  
+}
+
+/*#################################################*/
+/* Register Page */
+
+.register_cont {
+  background-image: url("./assests/background.jpg");
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.register_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin: 10% 0px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(245, 245, 245, 0.8), 0 0 20px rgba(245, 245, 245, 0.5);
+  transition: all 300ms ease;
+}
+
+.form_cont:hover {
+  scale: 1.025;
+  transition: all 300ms ease;
+}
+
+.reg h3 {
+  margin: 22px;
+  font-size: 32px;
+}
+
+.reg input {
+  height: 40px;
+  width: 500px;
+  margin-bottom: 22px;
+  border: none;
+  border-radius: 50px;
+  padding-left: 32px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.submit {
+  margin: 22px;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 16px 32px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.submit:hover {
+  background-color: rgb(179, 176, 176);
+  transition: all 300ms ease;
+}
+
+/*#################################################*/
+/* Footer section */
+
+.footer_background {
+  background: linear-gradient(to right, #222222 20%, #325f2e, rgb(121, 8, 8) );
+}
+
+.footer_cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 36px 0px;
+}
+
+.footer_cont figure {
+  width: 13%;
+}
+
+.footer_cont img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.footer_cont h3 {
+  margin: 36px 0px 8px 0px;
+  font-size: 26px;
+  color: white;
+}
+
+
+
+/*#################################################*/
+/*#################################################*/
+/*#################################################*/
+/*#################################################*/
+/*#################################################*/
+/*#################################################*/
+/*#################################################*/
+/* responsive design */
+
+@media (max-width: 768px)
+{
+  * {
+    overflow-x: hidden;
+  }
+
+  /*  burger menu*/
+  .nav_links {
+    display: none;
+  }
+
+  .nav_links2 {
+    display: none;
+  }
+
+  .btn__menu {
+    display: block;
+  }
+
+  /*#################################################*/
+  /* skeliton loading state for movies  */
+  .movie_skeliton {
+    width: calc(100% / 2);  
+  }
+
+  .movie_skeliton figure {
+    height: 270px;
+    width: 160px;
+  }
+
+  /*#######################################################
+  skeliton loading state for movie info */
+
+  .movie_cont_skeliton {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .movie_pic_skeliton {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .movie_info_skeliton {
+    width: 100%;
+    margin-left: 0px;
+    align-items: center;
+    padding: 0px 12px;
+  }
+
+  /*##########################
+  simple nav */
+
+  .simple_nav {
+    padding: 0px 4%;
+  }
+
+  .cont1 {
+    width: 50%
+  }
+  
+  /*##########################
+  Navigation with search */
+
+  .container1 nav img {
+    width: 150px;
+  }
+
+  .container1 ul {
+    padding: 0px 4%;
+  }
+
+  .seach_box {
+    margin-top: 50px;
+    height: 200px;
+    padding: 12px;
+  }
+
+  .seach_box h3 {
+    font-size: 24px;
+  }
+
+  .search_bar {
+    width: 90%;
+    height: 30%;
+  }
+
+  /*##########################
+  movies section */
+
+  .top_filter {
+    padding: 0px 12px;
+  }
+
+  .top_filter h3 {
+    font-size: 24px;
+  }
+
+  #filter {
+    font-size: 16;
+    padding: 8px 16px;
+  }
+
+  .movie_wrapper {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 16px;
+  }
+
+  .movie {
+    width: calc(100% / 2);
+  }
+
+  .movie figure {
+    height: 300px;
+    width: 170px;
+  }
+
+  .movie h4 {
+    font-size: 16px;
+    width: 90%;
+    text-align: left;
+  }
+
+  /*##########################
+  Movie info section */
+
+  #movie_info {
+    background-size:contain;
+  }
+
+
+  .movie_cont {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .movie_pic {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .movie_pic figure {
+    margin-top: 42px;
+    width: 280px;
+    height: 400px;
+  }
+
+  .movie_pic button {
+    width: 100%;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .movie_info {
+    width: 100%;
+    margin-left: 0px;
+    align-items: center;
+    padding: 0px 12px;
+  }
+
+  .time_genre {
+    align-items: center;
+  }
+
+  .sum {
+    align-items: center;
+  }
+
+  .watch_movie {
+    width: 100%;
+    padding: 0px 36px;
+  }
+
+  /*##########################
+  recommened movie section */
+
+  .recommended_cont h3 {
+    text-align: center;
+  }
+
+  .recommended_movies {
+    display: flex; 
+    flex-wrap: wrap;
+    margin-left: 20px;
+  }
+
+  /*##########################
+  subscription page */
+
+  .sub_cont {
+    background-size: contain;
+  }
+
+  .prices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .price {
+    width: 320px;
+    height: 600px;
+    margin-left: 20px;
+    margin: 48px 0px;
+  }
+
+  .price:hover {
+    scale: 1.01;
+
+  }
+
+  .price button {
+    margin: 12px 0px;
+  }
+
+  /*##########################
+  register page */
+
+  .register_cont {
+    background-size: contain;
+  }
+
+  .reg h3 {
+    margin: 18px;
+    font-size: 24px;
+  }
+
+  .reg input {
+    height: 40px;
+    width: 300px;
+  }
+
+  .submit {
+    padding: 12px 24px;
+  }
+
+  /*##########################
+  footer section */
+  
+
+  .footer_cont figure {
+    width: 40%;
+  }
+
+  .footer_cont h3 {
+    margin: 22px 0px 0px 0px;
+    font-size: 20px;
+    color: white;
+  }
+}
